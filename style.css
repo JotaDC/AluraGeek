@@ -16,7 +16,8 @@
     font-family: var(--fuente-principal);
     font-weight: 400;
     font-style: normal;
-    font-size: larger;
+    font-size: 24px;
+    color:#ffffff;
   }
 .header{
     display: flex;
@@ -31,7 +32,8 @@ h1{
     font-family: var(--fuente-principal);
     font-weight: 400;
     font-style: normal;
-    font-size: larger;
+   
+    font-size: 24px;
     margin-bottom: 2.5em;
     text-align: center;
     
@@ -41,6 +43,7 @@ main{
     flex-direction: column-reverse;
     margin-top: 2.5em;
     align-items: center;
+    gap:3em;
 }
 
 .productos{
@@ -99,4 +102,37 @@ input[type="text"]{
     font-weight: 300;
     font-size:20px ;
 }
+
+#logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #5d04d9;
   
+   
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #5d04d9;
+    padding-top: 30px;
+    gap:0.4em;
+    
+}
+.desarrollado{
+    font-size: 16px;
+    font-weight: 400;
+    color:#ffffff;
+    font-family: var(--fuente-secundaria);
+
+}
+.anio{
+    font-size: 16px;
+    font-weight: lighter;
+    color:#ffffff;
+    font-family: var(--fuente-secundaria);
+    padding-bottom: 1em;
+}
