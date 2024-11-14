@@ -54,10 +54,7 @@ main{
   overflow-y: scroll; /* Agrega barra de desplazamiento vertical */
   height: 50vw;
 }
-.card-container--value{
-    font-size: 16px;
-    font-weight: bold;
-}
+
 .delete-button{
     background-color: var(--color2);
     border-color: var(--color1);
@@ -90,9 +87,12 @@ main{
     border-radius: 1em;
     background-color: var(--color2);
     padding: 0.5em;
-
+   
 }
+
 .card-container--value{
+    font-size: 16px;
+    font-weight: bold;
     display:flex;
     flex-direction: row;
     justify-content: space-between;
@@ -100,9 +100,16 @@ main{
 }
 
 .img-container{
-
+    width: 192px; /* Ancho del  card */
+    height: 258px; /* Alto del card */
+   
+    display: flex;
+    justify-content: center;
+  
 }
 .img-container img{
+   
+  
     border-width: 0.125em;
     border-style: solid;
     border-radius: 1em;
