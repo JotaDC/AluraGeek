@@ -75,7 +75,10 @@ contenedor.addEventListener('click', async (event) => {
         const id=event.target.getAttribute("data-id");
         try {
             
-            const producto=await servicesProducts.deleteProduct(id);
+            if(confirm("¿Esta seguro de borrar el producto?")){
+                const producto=await servicesProducts.deleteProduct(id);
+            }
+            
            
         } catch (error) {
             console.log(error)
