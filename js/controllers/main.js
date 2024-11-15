@@ -2,6 +2,9 @@ import { servicesProducts } from "../services/product-services.js";
 
 const productContainer=document.querySelector("[data-product]");
 const form=document.querySelector("[data-form]");
+// Seleccionamos el contenedor que contendrá las tarjetas que no esta puesto dinamicamente
+const contenedor = document.querySelector('.products-container');
+
 
 // Funcion para crear Card
 function createCard({nombre,precio,imagen,id}){
@@ -15,8 +18,9 @@ function createCard({nombre,precio,imagen,id}){
                         <p>${nombre}</p>
                         <div class="card-container--value">
                             <p>$ ${precio}</p>
-                            <button class="delete-button" data-id="${id}">
-                                <img src="./assets/icontrash.png" alt="Eliminar" />
+                            <p>ID: ${id}</p>
+                            <button class="delete-button" >
+                                <img src="./assets/icontrash.png" data-id="${id}" alt="Eliminar" />
                             </button>
                         </div>
                     </div>
@@ -32,6 +36,7 @@ const renderProducts=async () => {
             const productCard=createCard(product);
             productContainer.appendChild(productCard);
             
+            
         });
     } catch (error) {
         console.log(error)
@@ -39,12 +44,11 @@ const renderProducts=async () => {
     
 };
 
-
 // Ejecucion principal
 
 //Captura del evento submit para crear card
 form.addEventListener("submit",async (evento)=>{
-    event.preventDefault();
+    evento.preventDefault();
     const nombre=document.querySelector("[data-nombre]").value;
     const precio=document.querySelector("[data-precio]").value;
     const imagen=document.querySelector("[data-imagen]").value;
@@ -58,6 +62,31 @@ form.addEventListener("submit",async (evento)=>{
     }
     form.reset();
     
-})
+});
+
+
+// Evento para ver a qeu card se le hizo click 
+// Agregamos un evento al contenedor que escucha los clics en sus hijos
+contenedor.addEventListener('click', async (event) => { 
+    // Verificamos si el elemento clickeado es una tarjeta
+    
+    if (event.target.tagName === 'IMG' && event.target.hasAttribute('data-id')){
+        //console.log(event.target.getAttribute('data-id'));
+        const id=event.target.getAttribute("data-id");
+        try {
+            
+            const producto=await servicesProducts.deleteProduct(id);
+           
+        } catch (error) {
+            console.log(error)
+        }
+    }
+   
+});
+
+
+
 renderProducts();
+
+
 
