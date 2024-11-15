@@ -52,17 +52,38 @@ form.addEventListener("submit",async (evento)=>{
     const nombre=document.querySelector("[data-nombre]").value;
     const precio=document.querySelector("[data-precio]").value;
     const imagen=document.querySelector("[data-imagen]").value;
+
     //console.log(nombre," ",precio," ", imagen)
-    try {
-        const newProduct=await servicesProducts.createProduct(nombre,precio,imagen);
-        const newCard=createCard(newProduct);
-        productContainer.appendChild(newCard);
-    } catch (error) {
-        console.log(error)
+   if(nombre.trim()==""){
+        console.log("hay error en el nombre");
+   }
+   if(precio.trim()==""){
+        console.log("hay error en el precio");
     }
-    form.reset();
+    if(imagen.trim()==""){
+        console.log("hay error en el imagen");
+    }
+
+    if(nombre.trim()=="" || precio.trim()=="" || imagen.trim()==""){
+        console.log("tiene un error")
+    }else{
+        console.log("no hay errer")
+        try {
+            const newProduct=await servicesProducts.createProduct(nombre,precio,imagen);
+            const newCard=createCard(newProduct);
+            productContainer.appendChild(newCard);
+        } catch (error) {
+            console.log(error)
+        }
+        form.reset();
+        }
+    }
+   
     
-});
+
+    
+    
+);
 
 
 // Evento para ver a qeu card se le hizo click 
