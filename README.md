@@ -1,6 +1,6 @@
 # AluraGeek
 
-![Screenshot](https://github.com/user-attachments/assets/3fc0f65a-f476-4e31-b7a7-ac16b66e6833)
+![Screenshot](https://github.com/JotaDC/AluraGeek/blob/main/assets/screenshot%20alurageek.png)
 
 **AluraGeek** es una aplicación web que permite a los usuarios gestionar una lista de productos. Los usuarios pueden **visualizar**, **agregar** y **eliminar** productos, utilizando tecnologías frontend modernas y un servidor JSON simulado.
 
@@ -16,7 +16,8 @@
 
 - **HTML5/CSS3**: Estructura y diseño.
 - **JavaScript (ES6 Modules)**: Lógica e interacción.
-- **json-server**: API RESTful simulada.
+- **json-server**: API RESTful simulada en local.
+- **mockapi.io**: Uso de https://mockapi.io/ 
 - **Fetch API**: Solicitudes HTTP.
 - **BEM (Block Element Modifier)**: Metodología para nombrar clases CSS.
 
@@ -31,7 +32,7 @@
 1. Clona este repositorio:
 
    ```bash
-   git clone https://github.com/tuusuario/alurageek.git
+   git clone https://github.com/JotaDC/alurageek.git
    ```
 
 2. Navega al directorio del proyecto:
@@ -81,4 +82,4 @@
 3. **Eliminar Producto**: Haz clic en el ícono de la papelera para eliminar un producto.
 
 ---
-Desarrollado por Alura Latam
+Desarrollado por Javier Cañete
