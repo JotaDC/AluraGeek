@@ -215,6 +215,7 @@ input[type="text"]{
         justify-content: center;
         gap:3em;
         padding-right: 1em;
+        overflow-y:auto; /* quita barra de desplazamiento vertical */
     }
  
     
