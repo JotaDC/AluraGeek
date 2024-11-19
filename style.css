@@ -51,8 +51,7 @@ main{
 .section-productos{
   font-family: var(--fuente-secundaria);
   font-size: 15px;
-  overflow-y: scroll; /* Agrega barra de desplazamiento vertical */
-  height: 50vw;
+ 
 }
 
 .delete-button{
@@ -67,9 +66,7 @@ main{
     flex-direction: column;
     align-items: center;
     
-    /*width: 26.875em;
-    height: 32.3125em;
-    */
+
 
 }
 .products-container{
@@ -216,6 +213,13 @@ input[type="text"]{
         gap:3em;
         padding-right: 1em;
     }
- 
+    .section-productos{
+        font-family: var(--fuente-secundaria);
+        font-size: 15px;
+        overflow-y: scroll; /* Agrega barra de desplazamiento vertical */
+        height: 50vw;
+      } 
+
+     
     
 }
