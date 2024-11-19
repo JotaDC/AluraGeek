@@ -2,6 +2,8 @@
 
 ![Screenshot](https://github.com/JotaDC/AluraGeek/blob/main/assets/screenshot%20alurageek.png)
 
+**Deploy:** https://alurageek-pi.vercel.app/
+
 **AluraGeek** es una aplicación web que permite a los usuarios gestionar una lista de productos. Los usuarios pueden **visualizar**, **agregar** y **eliminar** productos, utilizando tecnologías frontend modernas y un servidor JSON simulado.
 
 ## 🔥 Características
