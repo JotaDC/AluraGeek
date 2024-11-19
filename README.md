@@ -60,7 +60,6 @@
 ## 🗂️ Estructura del Proyecto
 
 - **index.html**: Estructura de la aplicación.
-- **styles/reset.css**: Reinicio de estilos.
 - **styles/style.css**: Estilos personalizados.
 - **js/controllers/main.js**: Lógica de agregar y eliminar productos.
 - **js/services/product-services.js**: Solicitudes HTTP (GET, POST, DELETE).
