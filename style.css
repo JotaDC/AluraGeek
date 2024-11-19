@@ -83,9 +83,14 @@ main{
     border-style: solid;
     border-radius: 1em;
     background-color: var(--color2);
+    color:#ffffff;
+    font-weight: 400;
     padding: 0.5em;
    
    
+}
+.card-container--info{
+    padding-top: 0.5em;
 }
 
 .card-container--value{
