@@ -35,6 +35,24 @@
       "precio": "500",
       "imagen": "https://th.bing.com/th/id/OIP.HcAuOtEzdw02RQOMi4WWIwAAAA?rs=1&pid=ImgDetMain",
       "id": 7
+    },
+    {
+      "nombre": "Chucky ",
+      "precio": "550",
+      "imagen": "https://th.bing.com/th/id/OIP.l-GJ3Oki2HRAoOAL5mcQnwHaMX?rs=1&pid=ImgDetMain",
+      "id": 8
+    },
+    {
+      "nombre": "Michael Jackson",
+      "precio": "2500",
+      "imagen": "https://th.bing.com/th/id/OIP.QKo90n29lHcJ_4mLPqVo0AHaHa?rs=1&pid=ImgDetMain",
+      "id": 9
+    },
+    {
+      "nombre": "Maradona",
+      "precio": "1000000",
+      "imagen": "https://www.pro-bems.com/IMAGES/images_1/FIGMX12FSMARARG/m/FIGMX12FSMARARG_3.jpg",
+      "id": 10
     }
   ]
 }
