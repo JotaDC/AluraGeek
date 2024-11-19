@@ -1,5 +1,5 @@
-const BASE_URL="http://localhost:3001/productos";
-//const BASE_URL="https://673614835995834c8a9559d1.mockapi.io/productos";
+//const BASE_URL="http://localhost:3001/productos";
+const BASE_URL="https://673614835995834c8a9559d1.mockapi.io/productos";
 
 const productList = async () => {
     try {
@@ -15,7 +15,7 @@ const productList = async () => {
 const createProduct=async (nombre, precio, imagen) =>{
     try {
         const response=await fetch(BASE_URL,{
-            method:"post",
+            method:"POST",
             headers:{
                 "Content-Type":"application/json",
             },
@@ -43,7 +43,7 @@ const deleteProduct=async (id) =>{
 
         
     } catch (error) {
-        console.log(error);
+        console.log("Error en la solicitud DELETE: ",error);
     }
     
 }

@@ -18,7 +18,7 @@ function createCard({nombre,precio,imagen,id}){
                         <p>${nombre}</p>
                         <div class="card-container--value">
                             <p>$ ${precio}</p>
-                            <p>ID: ${id}</p>
+                            
                             <button class="delete-button" >
                                 <img src="./assets/icontrash.png" data-id="${id}" alt="Eliminar" />
                             </button>
@@ -32,6 +32,8 @@ function createCard({nombre,precio,imagen,id}){
 const renderProducts=async () => {
     try {
         const listProducts=await servicesProducts.productList();
+        console.log(listProducts)
+       
         listProducts.forEach(product => {
             const productCard=createCard(product);
             productContainer.appendChild(productCard);
@@ -52,26 +54,20 @@ form.addEventListener("submit",async (evento)=>{
     const nombre=document.querySelector("[data-nombre]").value;
     const precio=document.querySelector("[data-precio]").value;
     const imagen=document.querySelector("[data-imagen]").value;
+    const error=document.querySelector(".mensajeError");
 
     //console.log(nombre," ",precio," ", imagen)
-   if(nombre.trim()==""){
-        console.log("hay error en el nombre");
-   }
-   if(precio.trim()==""){
-        console.log("hay error en el precio");
-    }
-    if(imagen.trim()==""){
-        console.log("hay error en el imagen");
-    }
-
     if(nombre.trim()=="" || precio.trim()=="" || imagen.trim()==""){
         console.log("tiene un error")
+        //alert("Por favor , complete todos los campos");
+        error.innerHTML="Por  favor, Complete todos los campos";
     }else{
-        console.log("no hay errer")
+        console.log("no hay error")
         try {
             const newProduct=await servicesProducts.createProduct(nombre,precio,imagen);
             const newCard=createCard(newProduct);
             productContainer.appendChild(newCard);
+            error.innerHTML="";
         } catch (error) {
             console.log(error)
         }
@@ -86,7 +82,7 @@ form.addEventListener("submit",async (evento)=>{
 );
 
 
-// Evento para ver a qeu card se le hizo click 
+// Evento para ver que card se le hizo click 
 // Agregamos un evento al contenedor que escucha los clics en sus hijos
 contenedor.addEventListener('click', async (event) => { 
     // Verificamos si el elemento clickeado es una tarjeta
@@ -98,8 +94,10 @@ contenedor.addEventListener('click', async (event) => {
             
             if(confirm("¿Esta seguro de borrar el producto?")){
                 const producto=await servicesProducts.deleteProduct(id);
+                console.log(producto.id);
+                history.go();
+               
             }
-            
            
         } catch (error) {
             console.log(error)
